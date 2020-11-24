@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>02.search</title>
+	<link rel="stylesheet" href="../css/all.min.css">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/02.search.css">
+</head>
+<body>
+	<div class="container" id="app">
+		<div class="jumbotron my-3">
+			<h1>
+				{{title}}
+				<hr>
+				<small>{{subTitle}}</small>
+			</h1>
+		</div>
+		<form action="#" class="search-form">
+			<div class="form-inline form-wrap">
+				<strong>메뉴검색 : </strong>
+				<input type="text" class="form-control p-3 input-menu" v-model="search" >
+				<i class="fa fa-times-circle bt-reset" v-show="search.length" v-on:click="onReset"></i>
+			</div>
+		</form>
+		<ul class="product-wrap">
+			<li class="product"><img src="" alt=""></li>
+		</ul>
+	</div>
+	<script src="../js/vue.js" type="module"></script>
+	<script src="../js/02.search.js" type="module"></script>
+</body>
+</html>
