@@ -18,10 +18,20 @@ new Vue({
 		title: '자자',
 		subTitle: '메뉴를 고르세요',
 		search:'',
+		prds:[],
 	},
 	methods: {
-		onReset() {
+		onReset(e) {
 			this.search='';
+			this.prds=[];
+		},
+		onSubmit(e) {
+			this.prds = products;
+		},
+		onKeyUp(e) {
+			if(this.search.length == 0) {
+				this.onReset();
+			}
 		}
 	}
 })

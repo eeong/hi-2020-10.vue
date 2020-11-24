@@ -17,15 +17,22 @@
 				<small>{{subTitle}}</small>
 			</h1>
 		</div>
-		<form action="#" class="search-form">
+		<form action="#" class="search-form" v-on:submit="onSubmit">
 			<div class="form-inline form-wrap">
 				<strong>메뉴검색 : </strong>
-				<input type="text" class="form-control p-3 input-menu" v-model="search" >
+				<input type="text" class="form-control p-3 input-menu" v-model="search" v-on:keyup="onKeyUp">
 				<i class="fa fa-times-circle bt-reset" v-show="search.length" v-on:click="onReset"></i>
 			</div>
 		</form>
-		<ul class="product-wrap">
-			<li class="product"><img src="" alt=""></li>
+		<ul class="product-wrapper">
+			<li class="product" v-for="v in prds" v-bind:key="v.id">
+				<div class="img-wrap" >
+					<img v-bind:src="v.src" class="w-100" alt="">
+				</div> 
+				<div class="price-wrap">
+					{{v.price}}
+				</div>
+			</li>
 		</ul>
 	</div>
 	<script src="../js/vue.js" type="module"></script>

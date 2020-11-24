@@ -1,3 +1,9 @@
-.form-wrap{ position: relative; display: inline-block;}
+ul{list-style: none;}
+
+.form-wrap{ position: relative; display: inline-block; padding: 0.5em; border-bottom: 2px solid #eee;}
 .input-menu {margin-left: 0.5em; }
-.bt-reset {cursor: pointer; }
+.bt-reset {cursor: pointer; position: absolute; top: 50%; transform: translateY(-50%); right: 24px;}
+
+.product-wrapper { display: flex; flex-wrap: wrap; margin-top: 2em; padding: 0;}
+.product { flex: 31.3333% 0 0; margin: 1%;}
+.product > .price-wrap{ padding: 1em; color: #fff; background-color: #444;}
